@@ -1,0 +1,178 @@
+/* Italian-inspired theme for Cantina Chichilo */
+
+:root {
+    --primary-color: #1e5631; /* Dark green */
+    --secondary-color: #ce2b37; /* Red */
+    --accent-color: #f1bf00; /* Gold */
+    --background-color: #f4f1de; /* Light beige */
+    --text-color: #333;
+    --font-family: 'Lato', sans-serif;
+}
+
+body {
+    font-family: var(--font-family);
+    background-color: var(--background-color);
+    color: var(--text-color);
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+}
+
+.responsive-img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+header {
+    background-color: var(--primary-color);
+    padding: 1rem 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    margin-left: 2rem;
+}
+
+nav ul {
+    display: flex;
+    justify-content: center;
+    list-style-type: none;
+    padding: 0;
+    margin-right: 2rem;
+}
+
+nav ul li {
+    margin: 0 1rem;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+nav ul li a:hover {
+    color: var(--accent-color);
+}
+
+main {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem;
+}
+
+h1, h2 {
+    color: var(--primary-color);
+}
+
+.slogan {
+    font-style: italic;
+    color: var(--secondary-color);
+}
+
+.established {
+    font-weight: bold;
+    color: var(--accent-color);
+}
+
+.hero-img {
+    margin-top: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.platos-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.plato-item {
+    background-color: white;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.plato-item:hover {
+    transform: translateY(-5px);
+}
+
+.plato-img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.plato-item h3 {
+    padding: 1rem;
+    margin: 0;
+    text-align: center;
+    color: var(--primary-color);
+}
+
+#horarios, #contacto {
+    background-color: white;
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-top: 2rem;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.interior-img, .map-img {
+    max-width: 50%;
+    border-radius: 10px;
+}
+
+.horarios-info, .contacto-info {
+    flex: 1;
+    min-width: 300px;
+    padding-left: 2rem;
+}
+
+footer {
+    background-color: var(--primary-color);
+    color: white;
+    text-align: center;
+    padding: 1rem 0;
+    margin-top: 2rem;
+}
+
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+    }
+
+    .logo {
+        margin: 1rem 0;
+    }
+
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+        margin-right: 0;
+    }
+
+    nav ul li {
+        margin: 0.5rem 0;
+    }
+
+    .interior-img, .map-img {
+        max-width: 100%;
+        margin-bottom: 1rem;
+    }
+
+    .horarios-info, .contacto-info {
+        padding-left: 0;
+    }
+}
